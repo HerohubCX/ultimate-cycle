@@ -78,17 +78,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
 .tag-minor{background:var(--bg-alt);color:var(--text3);border:1px solid var(--border2);}
 .risk-title{font-size:12px;font-weight:600;color:var(--text1);margin-bottom:3px;}
 .risk-desc{font-size:11px;color:var(--text2);line-height:1.5;}
-.dept-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
-.dept-row:last-child{margin-bottom:0;}
+.dept-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:6px 0;border-bottom:1px solid var(--border);}
+.dept-row:last-child{margin-bottom:0;border-bottom:none;}
 .dept-name{width:90px;font-size:11px;font-weight:600;color:var(--text2);flex-shrink:0;}
 .dept-name.danger{color:var(--red);}
 .dept-bar-bg{flex:1;height:8px;background:var(--bg-alt);border-radius:4px;overflow:hidden;}
 .dept-bar-fill{height:100%;border-radius:4px;}
-.dept-stars{width:36px;font-size:11px;font-weight:700;color:var(--text1);font-family:'JetBrains Mono',monospace;text-align:right;flex-shrink:0;}
-.neg-badge{font-size:9px;font-weight:600;padding:1px 6px;border-radius:10px;flex-shrink:0;white-space:nowrap;}
-.neg-ok{background:var(--green-bg);color:var(--green);border:1px solid var(--green-b);}
-.neg-mid{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-b);}
-.neg-bad{background:var(--red-bg);color:var(--red);border:1px solid var(--red-b);}
+.dept-count{width:52px;font-size:10px;font-weight:600;color:var(--text3);font-family:'JetBrains Mono',monospace;text-align:right;flex-shrink:0;white-space:nowrap;}
 .grid-charts{align-items:start;}
 .chart-wrap{height:210px;position:relative;}
 .emp-grid{display:flex;flex-direction:column;gap:10px;}
@@ -174,22 +170,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
 </head>
 <body>
 
-<nav class="topbar">
-  <a href="https://www.herohub.com" target="_blank" rel="noopener" class="logo-wrap" style="text-decoration:none">
-    <img class="hh-logo-img" src="https://cdn.prod.website-files.com/68238b5d1d8b582ad3c13bea/684c2fce2658b5354c86fdbb_f4f0c66a294a55c2274a9a418ae8dbcf_Teal.svg" alt="HeroHub"
-         onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex';">
-    <svg id="logo-fallback" style="display:none;height:26px;width:auto" viewBox="0 0 200 36" xmlns="http://www.w3.org/2000/svg">
-      <text x="0" y="27" font-family="'Inter',sans-serif" font-weight="800" font-size="26" letter-spacing="-1" fill="#00b8a0">HEROHUB</text>
-      <text x="188" y="13" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#00b8a0">®</text>
-    </svg>
-  </a>
-  <div class="topbar-right">
-    <button class="pdf-btn" onclick="window.print()">
-      <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 11v2a1 1 0 001 1h8a1 1 0 001-1v-2M8 2v8M5 7l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Download PDF
-    </button>
-  </div>
-</nav>
+
 
 <div class="page-hero">
   <div class="page-hero-tint"></div>
@@ -197,31 +178,31 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
   <div class="hero-inner">
     <div class="hero-top">
       <div>
-        <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span>Reputation Audit · Mar 2015 – Apr 2026</div>
+        <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span>Reputation Audit &nbsp;·&nbsp; Last 2 Years</div>
         <div class="hero-title">Ultimate Cycle</div>
         <div class="hero-sub">Powhatan, Virginia &nbsp;·&nbsp; Google Reviews Analysis</div>
       </div>
-      <div class="hero-badges"><span class="hbadge hb-elite">Elite Reputation: 92% Positive</span> <span class="hbadge hb-risk">Fee Transparency Complaints</span> <span class="hbadge hb-elite">Top 5% Customer Loyalty</span> <span class="hbadge hb-warn">Service Dept Quality Flags</span></div>
+      <div class="hero-badges"><span class="hbadge hb-elite">93.7% Five-Star Reviews</span> <span class="hbadge hb-risk">Hidden Fee Complaints</span></div>
     </div>
     <div class="metrics-strip">
       <div class="metric-item">
         <div class="metric-label">Avg Star Rating</div>
-        <div class="metric-value teal">4.82 ★</div>
-        <div class="metric-sub">2015–2021 4.73 → 2022–2026 4.87</div>
+        <div class="metric-value teal">4.79 ★</div>
+        <div class="metric-sub">2024–2024 4.76 → 2025–2026 4.8</div>
       </div>
       <div class="metric-item">
         <div class="metric-label">Total Reviews</div>
-        <div class="metric-value">296</div>
-        <div class="metric-sub">260 five-star reviews</div>
+        <div class="metric-value">158</div>
+        <div class="metric-sub">148 five-star reviews</div>
       </div>
       <div class="metric-item">
         <div class="metric-label">5-Star Share</div>
-        <div class="metric-value teal">87.8%</div>
-        <div class="metric-sub">92.2% positive overall</div>
+        <div class="metric-value teal">93.7%</div>
+        <div class="metric-sub">94.3% positive overall</div>
       </div>
       <div class="metric-item">
         <div class="metric-label">Owner Response Rate</div>
-        <div class="metric-value teal">66.5%</div>
+        <div class="metric-value teal">41.8%</div>
         <div class="metric-sub">Good engagement</div>
       </div>
     </div>
@@ -234,7 +215,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
     <div class="summary-icon">📊</div>
     <div>
       <div class="summary-headline">Executive Summary</div>
-      <div class="summary-text">Ultimate Cycle boasts an exceptional 4.82-star average across 296 reviews with 87.8% five-star ratings, driven by consistently praised sales staff, competitive pricing, and a welcoming atmosphere. The primary risk is a recurring pattern of complaints about undisclosed fees (freight/assembly charges) and occasional service department quality issues, though these represent a small fraction of total feedback and recent trends show near-perfect satisfaction.</div>
+      <div class="summary-text">Ultimate Cycle earns a stellar 4.79-star average across 158 reviews with 93.7% five-star ratings, driven by exceptional sales staff and competitive pricing that draws customers from hours away. The primary risk is a small cluster of complaints around undisclosed fees (freight/assembly charges) and a single alarming service quality incident involving safety-critical mechanical errors.</div>
     </div>
   </div>
 
@@ -245,13 +226,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
       
       <div class="risk-item">
         <div class="risk-indicator">
-          <div class="risk-pip amber"></div>
+          <div class="risk-pip red"></div>
           <div class="risk-line"></div>
         </div>
         <div>
-          <div class="risk-tag tag-high">High</div>
-          <div class="risk-title">Undisclosed Fee Complaints</div>
-          <div class="risk-desc">Multiple reviewers cite unexpected $1,000–$1,700 freight/assembly fees not clearly communicated upfront. At least 4 negative reviews specifically reference pricing surprises between online/phone quotes and final out-the-door costs, with one reviewer calling it 'dishonest.'</div>
+          <div class="risk-tag tag-critical">Critical</div>
+          <div class="risk-title">Service Department Safety Incident</div>
+          <div class="risk-desc">One review details dangerously overtorqued rear axle nut (162 ft/lb vs 72.5 spec), loose fender bolts, disconnected hoses/wiring harnesses, and over-inflated tires — creating a life-safety risk and potential legal liability.</div>
         </div>
       </div>
       <div class="risk-item">
@@ -261,19 +242,19 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
         </div>
         <div>
           <div class="risk-tag tag-high">High</div>
-          <div class="risk-title">Service Department Quality Control</div>
-          <div class="risk-desc">A detailed 1-star review describes loose bolts, over-torqued axle nut (162 ft/lb vs 72.5 spec), improperly routed hoses, and over-inflated tires after service. Another reviewer reports being turned away for service. These represent serious safety and liability concerns.</div>
+          <div class="risk-title">Undisclosed Freight & Assembly Fees</div>
+          <div class="risk-desc">Multiple negative reviews cite $1,300-$1,700 in freight/assembly fees not disclosed upfront, with advertised web prices jumping significantly at checkout. This erodes trust and triggers bait-and-switch perceptions.</div>
         </div>
       </div>
       <div class="risk-item">
         <div class="risk-indicator">
-          <div class="risk-pip gray"></div>
+          <div class="risk-pip amber"></div>
           <div class="risk-line"></div>
         </div>
         <div>
-          <div class="risk-tag tag-minor">Minor</div>
-          <div class="risk-title">Initial Customer Greeting Gaps</div>
-          <div class="risk-desc">At least 3 reviews mention walking in and not being greeted or acknowledged for several minutes. One customer drove an hour and left without being helped. While rare, this contradicts the overwhelmingly positive greeting experiences most customers report.</div>
+          <div class="risk-tag tag-high">High</div>
+          <div class="risk-title">Unauthorized Credit Pull Allegation</div>
+          <div class="risk-desc">One reviewer alleges Ultimate Cycle performed a hard credit inquiry without authorization, a potential FCRA compliance issue that could invite regulatory scrutiny.</div>
         </div>
       </div>
       <div class="risk-item">
@@ -283,8 +264,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
         </div>
         <div>
           <div class="risk-tag tag-minor">Minor</div>
-          <div class="risk-title">Communication Follow-Up Failures</div>
-          <div class="risk-desc">Two reviewers report being ghosted after submitting credit applications or making purchase inquiries, with no callbacks for a week or more, resulting in lost sales to competitors.</div>
+          <div class="risk-title">Inconsistent Customer Greeting</div>
+          <div class="risk-desc">Two reviews describe being ignored for several minutes upon arrival despite multiple visible staff. While rare, this creates a poor first impression and lost sales.</div>
         </div>
       </div>
     </div>
@@ -293,33 +274,23 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
       
       <div class="dept-row">
         <div class="dept-name">Sales</div>
-        <div class="dept-bar-bg"><div class="dept-bar-fill" style="width:98.6%;background:linear-gradient(90deg,#007a6a,var(--teal-d))"></div></div>
-        <div class="dept-stars">4.93</div>
-        <span class="neg-badge neg-bad">4 neg</span>
+        <div class="dept-bar-bg"><div class="dept-bar-fill" style="background:linear-gradient(90deg,#007a6a,var(--teal-d));width:97.0%"></div></div>
+        <div class="dept-count">130 reviews</div>
       </div>
       <div class="dept-row">
         <div class="dept-name danger">Service ⚠</div>
-        <div class="dept-bar-bg"><div class="dept-bar-fill" style="width:90.4%;background:linear-gradient(90deg,#be123c,var(--red))"></div></div>
-        <div class="dept-stars">4.52</div>
-        <span class="neg-badge neg-bad">5 neg</span>
+        <div class="dept-bar-bg"><div class="dept-bar-fill" style="background:linear-gradient(90deg,#be123c,var(--red));width:89.0%"></div></div>
+        <div class="dept-count">15 reviews</div>
       </div>
       <div class="dept-row">
-        <div class="dept-name">Parts</div>
-        <div class="dept-bar-bg"><div class="dept-bar-fill" style="width:99.0%;background:linear-gradient(90deg,#007a6a,var(--teal-d))"></div></div>
-        <div class="dept-stars">4.95</div>
-        <span class="neg-badge neg-mid">1 neg</span>
+        <div class="dept-name">Parts & Accessories</div>
+        <div class="dept-bar-bg"><div class="dept-bar-fill" style="background:linear-gradient(90deg,var(--teal-d),var(--teal));width:100.0%"></div></div>
+        <div class="dept-count">8 reviews</div>
       </div>
       <div class="dept-row">
-        <div class="dept-name">F&I / Finance</div>
-        <div class="dept-bar-bg"><div class="dept-bar-fill" style="width:99.4%;background:linear-gradient(90deg,#007a6a,var(--teal-d))"></div></div>
-        <div class="dept-stars">4.97</div>
-        <span class="neg-badge neg-ok">0 neg</span>
-      </div>
-      <div class="dept-row">
-        <div class="dept-name">Delivery / Logistics</div>
-        <div class="dept-bar-bg"><div class="dept-bar-fill" style="width:100.0%;background:linear-gradient(90deg,var(--teal-d),var(--teal))"></div></div>
-        <div class="dept-stars">5.00</div>
-        <span class="neg-badge neg-ok">0 neg</span>
+        <div class="dept-name danger">Finance (F&I) ⚠</div>
+        <div class="dept-bar-bg"><div class="dept-bar-fill" style="background:linear-gradient(90deg,#007a6a,var(--teal-d));width:99.0%"></div></div>
+        <div class="dept-count">12 reviews</div>
       </div>
     </div>
   </div>
@@ -358,7 +329,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
             <div class="emp-meta">Sales</div>
             <span class="emp-tier tier-elite">Elite Ambassador</span>
           </div>
-          <div class="emp-count">30</div>
+          <div class="emp-count">22</div>
         </div>
         <div class="emp-row">
           <div class="emp-avatar av-elite">S</div>
@@ -367,70 +338,52 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
             <div class="emp-meta">Sales</div>
             <span class="emp-tier tier-elite">Elite Ambassador</span>
           </div>
-          <div class="emp-count">13</div>
+          <div class="emp-count">15</div>
         </div>
         <div class="emp-row">
           <div class="emp-avatar av-elite">L</div>
           <div style="flex:1;min-width:0">
             <div class="emp-name">Lance Taylor</div>
-            <div class="emp-meta">Sales · F&I</div>
+            <div class="emp-meta">Sales</div>
             <span class="emp-tier tier-elite">Elite Ambassador</span>
           </div>
-          <div class="emp-count">18</div>
+          <div class="emp-count">11</div>
         </div>
         <div class="emp-row">
-          <div class="emp-avatar av-elite">S</div>
+          <div class="emp-avatar av-high">S</div>
           <div style="flex:1;min-width:0">
             <div class="emp-name">Steven Carpenter</div>
-            <div class="emp-meta">Sales · General Manager</div>
-            <span class="emp-tier tier-elite">Elite Ambassador</span>
+            <div class="emp-meta">Sales / GM</div>
+            <span class="emp-tier tier-high">High Performer</span>
           </div>
-          <div class="emp-count">17</div>
+          <div class="emp-count">9</div>
         </div>
         <div class="emp-row">
-          <div class="emp-avatar av-high">K</div>
+          <div class="emp-avatar av-reliable">K</div>
           <div style="flex:1;min-width:0">
             <div class="emp-name">Kevin Haggerty</div>
             <div class="emp-meta">Sales</div>
-            <span class="emp-tier tier-high">High Performer</span>
-          </div>
-          <div class="emp-count">6</div>
-        </div>
-        <div class="emp-row">
-          <div class="emp-avatar av-high">D</div>
-          <div style="flex:1;min-width:0">
-            <div class="emp-name">Danny</div>
-            <div class="emp-meta">Service</div>
-            <span class="emp-tier tier-high">High Performer</span>
-          </div>
-          <div class="emp-count">7</div>
-        </div>
-        <div class="emp-row">
-          <div class="emp-avatar av-elite">D</div>
-          <div style="flex:1;min-width:0">
-            <div class="emp-name">Dave / David Willoughby</div>
-            <div class="emp-meta">Sales</div>
-            <span class="emp-tier tier-elite">Elite Ambassador</span>
-          </div>
-          <div class="emp-count">14</div>
-        </div>
-        <div class="emp-row">
-          <div class="emp-avatar av-high">J</div>
-          <div style="flex:1;min-width:0">
-            <div class="emp-name">Jacob</div>
-            <div class="emp-meta">Service · Parts</div>
-            <span class="emp-tier tier-high">High Performer</span>
-          </div>
-          <div class="emp-count">5</div>
-        </div>
-        <div class="emp-row">
-          <div class="emp-avatar av-reliable">V</div>
-          <div style="flex:1;min-width:0">
-            <div class="emp-name">Vic</div>
-            <div class="emp-meta">Parts</div>
             <span class="emp-tier tier-reliable">Reliable Contributor</span>
           </div>
           <div class="emp-count">4</div>
+        </div>
+        <div class="emp-row">
+          <div class="emp-avatar av-reliable">D</div>
+          <div style="flex:1;min-width:0">
+            <div class="emp-name">Danny</div>
+            <div class="emp-meta">Service</div>
+            <span class="emp-tier tier-reliable">Reliable Contributor</span>
+          </div>
+          <div class="emp-count">4</div>
+        </div>
+        <div class="emp-row">
+          <div class="emp-avatar av-reliable">J</div>
+          <div style="flex:1;min-width:0">
+            <div class="emp-name">Jacob</div>
+            <div class="emp-meta">Service / Parts</div>
+            <span class="emp-tier tier-reliable">Reliable Contributor</span>
+          </div>
+          <div class="emp-count">3</div>
         </div>
         <div class="emp-row">
           <div class="emp-avatar av-reliable">R</div>
@@ -451,22 +404,22 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
           <div class="emp-count">2</div>
         </div>
         <div class="emp-row">
-          <div class="emp-avatar av-high">P</div>
+          <div class="emp-avatar av-reliable">V</div>
           <div style="flex:1;min-width:0">
-            <div class="emp-name">Pete</div>
-            <div class="emp-meta">Owner · Sales</div>
-            <span class="emp-tier tier-high">High Performer</span>
-          </div>
-          <div class="emp-count">7</div>
-        </div>
-        <div class="emp-row">
-          <div class="emp-avatar av-reliable">T</div>
-          <div style="flex:1;min-width:0">
-            <div class="emp-name">Tony Martin</div>
-            <div class="emp-meta">Sales</div>
+            <div class="emp-name">Vic</div>
+            <div class="emp-meta">Parts</div>
             <span class="emp-tier tier-reliable">Reliable Contributor</span>
           </div>
-          <div class="emp-count">3</div>
+          <div class="emp-count">2</div>
+        </div>
+        <div class="emp-row">
+          <div class="emp-avatar av-reliable">L</div>
+          <div style="flex:1;min-width:0">
+            <div class="emp-name">Lance (Finance)</div>
+            <div class="emp-meta">Finance</div>
+            <span class="emp-tier tier-reliable">Reliable Contributor</span>
+          </div>
+          <div class="emp-count">2</div>
         </div>
         <div class="emp-row">
           <div class="emp-avatar av-reliable">J</div>
@@ -478,22 +431,49 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
           <div class="emp-count">1</div>
         </div>
         <div class="emp-row">
-          <div class="emp-avatar av-reliable">C</div>
+          <div class="emp-avatar av-reliable">D</div>
           <div style="flex:1;min-width:0">
-            <div class="emp-name">Chris Goodin</div>
+            <div class="emp-name">David</div>
             <div class="emp-meta">Sales</div>
             <span class="emp-tier tier-reliable">Reliable Contributor</span>
           </div>
-          <div class="emp-count">2</div>
+          <div class="emp-count">1</div>
         </div>
         <div class="emp-row">
-          <div class="emp-avatar av-high">L</div>
+          <div class="emp-avatar av-reliable">D</div>
           <div style="flex:1;min-width:0">
-            <div class="emp-name">Lance (Finance)</div>
-            <div class="emp-meta">F&I</div>
-            <span class="emp-tier tier-high">High Performer</span>
+            <div class="emp-name">Dan</div>
+            <div class="emp-meta">Service</div>
+            <span class="emp-tier tier-reliable">Reliable Contributor</span>
           </div>
-          <div class="emp-count">8</div>
+          <div class="emp-count">1</div>
+        </div>
+        <div class="emp-row">
+          <div class="emp-avatar av-reliable">L</div>
+          <div style="flex:1;min-width:0">
+            <div class="emp-name">Luke</div>
+            <div class="emp-meta">Delivery</div>
+            <span class="emp-tier tier-reliable">Reliable Contributor</span>
+          </div>
+          <div class="emp-count">1</div>
+        </div>
+        <div class="emp-row">
+          <div class="emp-avatar av-reliable">C</div>
+          <div style="flex:1;min-width:0">
+            <div class="emp-name">Chico</div>
+            <div class="emp-meta">Delivery</div>
+            <span class="emp-tier tier-reliable">Reliable Contributor</span>
+          </div>
+          <div class="emp-count">1</div>
+        </div>
+        <div class="emp-row">
+          <div class="emp-avatar av-reliable">D</div>
+          <div style="flex:1;min-width:0">
+            <div class="emp-name">Dave</div>
+            <div class="emp-meta">Delivery</div>
+            <span class="emp-tier tier-reliable">Reliable Contributor</span>
+          </div>
+          <div class="emp-count">1</div>
         </div>
         <div class="emp-row">
           <div class="emp-avatar av-reliable">M</div>
@@ -509,13 +489,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
     <div class="col-stack">
       <div class="card">
         <div class="card-title"><span class="title-dot" style="background:var(--teal)"></span>Customer Voice</div>
-        <div class="chip-wrap"><span class="chip">"Worth the drive"</span><span class="chip">"Quick and painless"</span><span class="chip">"Best prices around"</span><span class="chip">"No pressure sales"</span><span class="chip">"Treated like family"</span><span class="chip">"Made it seamless"</span><span class="chip">"Knowledgeable staff"</span><span class="chip">"First bike purchase"</span><span class="chip">"Above and beyond"</span><span class="chip">"Top notch service"</span></div>
+        <div class="chip-wrap"><span class="chip">"worth the 3 hour drive"</span><span class="chip">"best price in the region"</span><span class="chip">"no pushy sales tactics"</span><span class="chip">"made the process painless"</span><span class="chip">"treated me like family"</span><span class="chip">"undisclosed $1300 fee"</span><span class="chip">"dangerously overtorqued rear axle"</span><span class="chip">"knowledgeable RIDERS not random people"</span></div>
         <div class="sentiment-section">
-          <div class="sentiment-label">Overall sentiment — 296 reviews</div>
-          <div class="sentiment-track"><div class="sentiment-pos" style="width:92.2%"></div></div>
+          <div class="sentiment-label">Overall sentiment — 158 reviews</div>
+          <div class="sentiment-track"><div class="sentiment-pos" style="width:94.3%"></div></div>
           <div class="sentiment-legend">
-            <span class="sl"><span class="sl-dot" style="background:var(--teal)"></span>92.2% positive (273)</span>
-            <span class="sl"><span class="sl-dot" style="background:var(--red)"></span>6.4% negative (19)</span>
+            <span class="sl"><span class="sl-dot" style="background:var(--teal)"></span>94.3% positive (149)</span>
+            <span class="sl"><span class="sl-dot" style="background:var(--red)"></span>5.1% negative (8)</span>
           </div>
         </div>
       </div>
@@ -525,52 +505,52 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
         
         <div class="brand-row">
           <div class="brand-dot" style="background:var(--green)"></div>
-          <div class="brand-name-col">Kawasaki</div>
-          <div class="brand-mentions">58 mentions</div>
-          <div class="brand-stars-col" style="color:var(--green)">4.88★</div>
-          <div class="brand-read">Most-mentioned brand with overwhelmingly positive reviews across motorcycles, UTVs (Mule, KRX, Ridge), and ATVs. Customers praise selection, pricing, and staff knowledge of the lineup.</div>
+          <div class="brand-name-col">CFMOTO</div>
+          <div class="brand-mentions">22</div>
+          <div class="brand-stars-col" style="color:var(--green)">4.91★</div>
+          <div class="brand-read">Strong seller with high satisfaction; broad lineup from ATVs to UTVs to motorcycles driving significant volume</div>
         </div>
         <div class="brand-row">
           <div class="brand-dot" style="background:var(--green)"></div>
-          <div class="brand-name-col">CFMOTO</div>
-          <div class="brand-mentions">24 mentions</div>
-          <div class="brand-stars-col" style="color:var(--green)">4.96★</div>
-          <div class="brand-read">Rapidly growing brand presence with near-perfect sentiment. Customers frequently purchase UTVs (UForce, IBEX) and motorcycles (450NK, 450SS, 675SS) with strong value perception.</div>
+          <div class="brand-name-col">Kawasaki</div>
+          <div class="brand-mentions">18</div>
+          <div class="brand-stars-col" style="color:var(--green)">4.83★</div>
+          <div class="brand-read">Core brand with loyal repeat buyers across KRX, Mule, Z-series, and Ninja lines</div>
         </div>
         <div class="brand-row">
           <div class="brand-dot" style="background:var(--green)"></div>
           <div class="brand-name-col">Suzuki</div>
-          <div class="brand-mentions">18 mentions</div>
-          <div class="brand-stars-col" style="color:var(--green)">4.94★</div>
-          <div class="brand-read">Strong loyalty across sport bikes (GSX-R, GSX-8R) and adventure models (V-Strom, DR650). Customers highlight competitive pricing and staff riding expertise.</div>
+          <div class="brand-mentions">10</div>
+          <div class="brand-stars-col" style="color:var(--green)">4.90★</div>
+          <div class="brand-read">Popular motorcycle brand especially GSX-R and Hayabusa models; strong customer satisfaction</div>
         </div>
         <div class="brand-row">
-          <div class="brand-dot" style="background:var(--amber)"></div>
+          <div class="brand-dot" style="background:var(--green)"></div>
           <div class="brand-name-col">Mahindra</div>
-          <div class="brand-mentions">8 mentions</div>
-          <div class="brand-stars-col" style="color:var(--amber)">4.63★</div>
-          <div class="brand-read">Tractor segment with generally positive reviews. One complaint about deceptive web pricing on eMax model and another about service learning curve on larger tractors. Most reviews praise sales experience.</div>
+          <div class="brand-mentions">4</div>
+          <div class="brand-stars-col" style="color:var(--green)">5.00★</div>
+          <div class="brand-read">Tractor segment performing well with seamless long-distance sales experience</div>
         </div>
         <div class="brand-row">
           <div class="brand-dot" style="background:var(--green)"></div>
           <div class="brand-name-col">Honda</div>
-          <div class="brand-mentions">2 mentions</div>
+          <div class="brand-mentions">2</div>
           <div class="brand-stars-col" style="color:var(--green)">5.00★</div>
-          <div class="brand-read">Limited mentions but positive, including Honda Pioneer UTV purchase.</div>
+          <div class="brand-read">Limited mentions but positive; Pioneer UTV referenced</div>
         </div>
         <div class="brand-row">
           <div class="brand-dot" style="background:var(--green)"></div>
           <div class="brand-name-col">Denago</div>
-          <div class="brand-mentions">1 mention</div>
+          <div class="brand-mentions">1</div>
           <div class="brand-stars-col" style="color:var(--green)">5.00★</div>
-          <div class="brand-read">Single e-bike purchase mentioned positively as a Christmas gift.</div>
+          <div class="brand-read">Single e-bike sale with positive feedback</div>
         </div>
         <div class="brand-row">
           <div class="brand-dot" style="background:var(--green)"></div>
           <div class="brand-name-col">Cannondale</div>
-          <div class="brand-mentions">1 mention</div>
+          <div class="brand-mentions">1</div>
           <div class="brand-stars-col" style="color:var(--green)">5.00★</div>
-          <div class="brand-read">E-bike service interaction praised for Jacob's patience and helpfulness with flat tire repair.</div>
+          <div class="brand-read">E-bike service interaction; positive parts/service experience</div>
         </div>
       </div>
     </div>
@@ -584,22 +564,22 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
       <div class="action-item">
         <div class="action-num num-red">1</div>
         <div>
-          <div class="action-text">Standardize fee disclosure: Publish freight, assembly, and prep fees on every online listing and quote document. Train all sales staff to present itemized out-the-door pricing on first contact.</div>
-          <div class="action-owner">General Manager · Critical</div>
+          <div class="action-text">Conduct immediate audit of service department QC procedures; implement mandatory torque-spec checklists and dual-sign-off on all safety-critical fasteners before any vehicle leaves the shop</div>
+          <div class="action-owner">Service Manager</div>
         </div>
       </div>
       <div class="action-item">
         <div class="action-num num-red">2</div>
         <div>
-          <div class="action-text">Implement service quality checklist: Require torque verification signoff, hose/harness routing check, and tire pressure verification before any vehicle leaves the shop. Conduct random QC audits.</div>
-          <div class="action-owner">Service Manager · Critical</div>
+          <div class="action-text">Display all fees (freight, assembly, dealer prep) transparently on website listings and in initial price quotes to eliminate bait-and-switch perceptions</div>
+          <div class="action-owner">GM / Marketing</div>
         </div>
       </div>
       <div class="action-item">
         <div class="action-num num-red">3</div>
         <div>
-          <div class="action-text">Create credit application follow-up SOP: Require same-day acknowledgment of all credit applications and mandatory 24-hour callback policy for all pending deals.</div>
-          <div class="action-owner">Sales Manager · Critical</div>
+          <div class="action-text">Review F&I credit inquiry procedures to ensure written customer authorization is obtained before every hard pull; document compliance training</div>
+          <div class="action-owner">F&I Manager</div>
         </div>
       </div>
     </div>
@@ -609,36 +589,36 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
       <div class="action-item">
         <div class="action-num num-amber">1</div>
         <div>
-          <div class="action-text">Establish a formal customer greeting protocol: Assign a rotating greeter role to ensure every walk-in is acknowledged within 60 seconds of entry.</div>
-          <div class="action-owner">Sales Manager · Medium</div>
+          <div class="action-text">Implement a customer greeting protocol: every visitor acknowledged within 60 seconds of entry, with a staff rotation or greeter system during peak hours</div>
+          <div class="action-owner">Sales Manager</div>
         </div>
       </div>
       <div class="action-item">
         <div class="action-num num-amber">2</div>
         <div>
-          <div class="action-text">Address staff product knowledge gaps: Ensure all sales and phone staff can answer basic spec questions (2-stroke vs 4-stroke, model availability) for all carried brands.</div>
-          <div class="action-owner">Sales Manager · Medium</div>
+          <div class="action-text">Provide product knowledge refresher training to all sales staff ensuring they can answer basic spec questions (2-stroke vs 4-stroke, model details) for all carried brands</div>
+          <div class="action-owner">Sales Manager</div>
         </div>
       </div>
       <div class="action-item">
         <div class="action-num num-amber">3</div>
         <div>
-          <div class="action-text">Respond to all remaining unanswered negative reviews publicly, acknowledging concerns and offering resolution paths. Current response rate on 1-star reviews is inconsistent.</div>
-          <div class="action-owner">Marketing · Medium</div>
+          <div class="action-text">Increase Google review response rate from 41.8% toward 80%+ to demonstrate active customer engagement, especially on negative reviews</div>
+          <div class="action-owner">GM / Marketing</div>
         </div>
       </div>
       <div class="action-item">
         <div class="action-num num-teal">4</div>
         <div>
-          <div class="action-text">Leverage 'worth the drive' reputation in marketing: Feature customer testimonials about long-distance purchases (3-9 hour drives) in advertising and social media campaigns.</div>
-          <div class="action-owner">Marketing · Medium</div>
+          <div class="action-text">Coach Matt on product knowledge and customer engagement following negative review citing inability to answer basic motorcycle specifications</div>
+          <div class="action-owner">Sales Manager</div>
         </div>
       </div>
       <div class="action-item">
         <div class="action-num num-teal">5</div>
         <div>
-          <div class="action-text">Formalize Drew Mason's and Larry Minnick's best practices as sales training material for newer staff members to maintain consistency as the team grows.</div>
-          <div class="action-owner">General Manager · Medium</div>
+          <div class="action-text">Develop a post-service quality checklist customers can see, reinforcing confidence in service work completed</div>
+          <div class="action-owner">Service Manager</div>
         </div>
       </div>
     </div>
@@ -659,47 +639,47 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
       </button>
-      <button class="pdf-btn" onclick="downloadFullReport()" style="white-space:nowrap;flex-shrink:0">
+      <button class="pdf-btn" onclick="downloadFile()" style="white-space:nowrap;flex-shrink:0">
         <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 11v2a1 1 0 001 1h8a1 1 0 001-1v-2M8 2v8M5 7l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Download Full Report
+        Download Report
       </button>
     </div>
     <div id="fullReport" class="report-body" hidden>
       <div class="report-section">
         <div class="report-section-title">Executive Summary</div>
-        <p style='margin-top:.75rem'>Ultimate Cycle in Powhatan, Virginia has built an outstanding reputation over a decade of Google reviews, earning a 4.82-star average across 296 reviews. An extraordinary 87.8% of all reviews are five stars, and 92.2% are positive (4-5 stars). The dealership is widely recognized for competitive pricing that draws customers from hours away (Virginia Beach, North Carolina, South Carolina, Maryland, Kentucky, Ohio, and even across the country), a knowledgeable and passionate staff of actual riders, and a low-pressure, transparent sales environment. The business has demonstrated remarkable consistency, with yearly averages never dipping below 4.5 stars and recent years (2023-2026) averaging 4.9+.</p><p style='margin-top:.75rem'>The dealership's primary vulnerabilities center on fee transparency — specifically the communication of freight, assembly, and prep charges — which has generated the most detailed and impactful negative reviews. A secondary concern involves service department quality control, highlighted by one particularly alarming review describing safety-critical errors (over-torqued axle nut, loose bolts, improperly routed brake hoses). While these issues affect fewer than 7% of reviewers, they represent reputational and liability risks that warrant immediate attention. The overwhelmingly positive trajectory, bolstered by a deep bench of elite salespeople and genuine customer enthusiasm, positions Ultimate Cycle as one of the strongest powersports dealerships in the Mid-Atlantic region.</p>
+        <p style='margin-top:.75rem'>Ultimate Cycle Discount PowerSports in Powhatan, Virginia delivers an outstanding customer experience across 158 reviews spanning April 2024 to April 2026, achieving a 4.79-star average with 93.7% five-star ratings. The dealership's competitive pricing strategy, knowledgeable rider-staff, and no-pressure sales culture routinely draw customers from 2-6 hours away, with many citing the drive as 'well worth it.' The trend is strongly positive, with the most recent quarters (25 Q4 through 26 Q2) achieving near-perfect or perfect 5.0 averages on increasing volume.</p><p style='margin-top:.75rem'>The sales department is the clear strength, powered by standout employees Drew Mason (32 mentions), Larry Minnick (22 mentions), Simon Green (15 mentions), and Lance Taylor (11 mentions), all of whom consistently earn praise for responsiveness, product knowledge, transparency, and willingness to go above and beyond. The parts and service departments also earn strong marks, with Jacob, Danny, and Vic repeatedly praised for their expertise and customer care.</p><p style='margin-top:.75rem'>However, 8 negative reviews (5.1%) reveal important risk areas. The most critical is a service department incident involving dangerous mechanical errors — an overtorqued rear axle nut at more than double specification, loose bolts, and disconnected wiring — representing a serious safety and liability concern. Additionally, multiple customers report frustration with undisclosed freight and assembly fees ranging from $1,300 to $1,700 that inflate the advertised price significantly at checkout. One customer alleges an unauthorized hard credit inquiry. Two reviews cite failure to greet customers upon arrival. These issues, while infrequent, could escalate reputationally and legally if unaddressed.</p>
       </div>
       <div class="report-section">
         <div class="report-section-title">Overall Dealership Metrics</div>
         <table class="report-table">
           <thead><tr><th>Metric</th><th>Result</th></tr></thead>
           <tbody>
-            <tr><td>Total reviews</td><td>296</td></tr>
-            <tr><td>Average star rating</td><td>4.82</td></tr>
-            <tr><td>5-star reviews</td><td>260 (87.8%)</td></tr>
-            <tr><td>Positive reviews (4–5 star)</td><td>92.2%</td></tr>
-            <tr><td>Negative reviews (1–2 star)</td><td>6.4%</td></tr>
-            <tr><td>Owner response rate</td><td>66.5%</td></tr>
+            <tr><td>Total reviews</td><td>158</td></tr>
+            <tr><td>Average star rating</td><td>4.79</td></tr>
+            <tr><td>5-star reviews</td><td>148 (93.7%)</td></tr>
+            <tr><td>Positive reviews (4–5 star)</td><td>94.3%</td></tr>
+            <tr><td>Negative reviews (1–2 star)</td><td>5.1%</td></tr>
+            <tr><td>Owner response rate</td><td>41.8%</td></tr>
           </tbody>
         </table>
       </div>
       <div class="report-section">
         <div class="report-section-title">What Customers Consistently Praise</div>
-        <ul class="report-list"><li>Customers consistently travel 2-9 hours to purchase due to unbeatable pricing, with many stating prices are $1,000-$3,000 below competitors</li><li>Drew Mason, Larry Minnick, and Simon Green are repeatedly singled out by name as exceptional salespeople who make the buying process effortless</li><li>First-time bike/ATV buyers feel especially welcomed with patient, educational, no-pressure guidance</li><li>Finance team praised for securing low APR rates proactively and making paperwork quick (often under 30 minutes)</li><li>Service department pickup/delivery capability and Danny's professionalism earn strong loyalty from repeat customers</li><li>Staff are genuine riders and enthusiasts who share personal experience and honest advice, including pros and cons of competitors</li><li>Multiple customers describe Ultimate Cycle as 'the best purchasing experience' across all vehicle types they've ever had</li><li>Parts department (Vic, Jacob) praised for going above and beyond, including overnight shipping parts to a rider on the Trans-America Trail</li></ul>
-        <p style="margin-top:.75rem">Representative language: Worth the drive · Quick and painless · Best prices around · No pressure · Treated like family · Seamless · Knowledgeable · Above and beyond · Top notch · First class · 10 out of 10 · Outstanding · Transparent · Honest</p>
+        <ul class="report-list"><li>Drew Mason is the dealership's top-mentioned employee with 32 positive mentions, praised for knowledge, responsiveness, and making first-time buyers feel confident</li><li>Larry Minnick earns 22 mentions with customers highlighting his no-pressure approach, fast callbacks, and ability to close same-day deals</li><li>Simon Green receives 15 mentions for patience, professionalism, and personal delivery of vehicles including a memorable Christmas surprise</li><li>Competitive pricing is the #1 theme — dozens of reviewers cite saving $1,000+ vs competitors and the best prices on the eastern seaboard</li><li>Long-distance customers (3-6 hours away, even out-of-state) consistently say the drive was worth it for pricing, service, and experience</li><li>The no-pressure, relationship-focused sales culture is praised in nearly every detailed review</li><li>Service department earns strong marks from Danny, Jacob, and Jordan for professionalism and bike maintenance</li><li>Finance team praised for securing low APR rates, quick paperwork, and friendly interactions</li></ul>
+        <p style="margin-top:.75rem">Representative language: Customers overwhelmingly describe the experience as 'seamless,' 'painless,' and 'quick and easy.' The phrase 'worth the drive' appears repeatedly. Staff are called 'knowledgeable,' 'friendly,' 'patient,' and 'not pushy.' Multiple first-time buyers express deep gratitude for feeling welcomed and educated rather than sold to. The dealership is frequently compared favorably to competitors, with phrases like 'best experience I've had at any dealership' recurring across reviews.</p>
       </div>
       <div class="report-section">
         <div class="report-section-title">Department-by-Department Analysis</div>
         <table class="report-table">
           <thead><tr><th>Department</th><th>Avg Stars</th><th>Positive %</th><th>Negatives</th><th>Signal</th><th>Risks</th></tr></thead>
-          <tbody><tr><td>Sales</td><td>4.93</td><td>96%</td><td>4</td><td>Dominant strength</td><td>Rare greeting failures; occasional ghosting on follow-ups</td></tr><tr><td>Service</td><td>4.52</td><td>82%</td><td>5</td><td>Generally strong with standout techs</td><td>Quality control errors on one documented visit; capacity constraints; turned away customers</td></tr><tr><td>Parts</td><td>4.95</td><td>97%</td><td>1</td><td>Excellent support function</td><td>One knowledge gap complaint (Matt unable to answer basic spec question)</td></tr><tr><td>F&I / Finance</td><td>4.97</td><td>99%</td><td>0</td><td>Streamlined and customer-friendly</td><td>One mention of extended warranty discussion timing; unauthorized hard credit pull alleged</td></tr><tr><td>Delivery / Logistics</td><td>5.00</td><td>100%</td><td>0</td><td>Strong differentiator</td><td>None identified</td></tr></tbody>
+          <tbody><tr><td>Sales</td><td>4.85</td><td>95%</td><td>3</td><td>Overwhelmingly positive</td><td>Fee transparency issues; occasional greeting failures; one product knowledge gap (Matt)</td></tr><tr><td>Service</td><td>4.45</td><td>85%</td><td>2</td><td>Strong but one critical safety incident</td><td>Dangerous mechanical errors on one bike; potential liability exposure</td></tr><tr><td>Parts & Accessories</td><td>5.00</td><td>100%</td><td>0</td><td>Excellent</td><td>None identified</td></tr><tr><td>Finance (F&I)</td><td>4.95</td><td>92%</td><td>1</td><td>Very strong</td><td>Unauthorized credit pull allegation</td></tr></tbody>
         </table>
       </div>
       <div class="report-section">
         <div class="report-section-title">Individual Performance Analysis</div>
         <table class="report-table">
           <thead><tr><th>Employee</th><th>Mentions</th><th>Sentiment</th><th>Dept(s)</th><th>Category</th><th>Read</th></tr></thead>
-          <tbody><tr><td><strong>Drew Mason</strong></td><td>32</td><td>100% Positive</td><td>Sales</td><td>Elite Ambassador</td><td>Top-mentioned employee across all reviews. Praised for responsiveness, knowledge across motorcycles/UTVs/tractors, staying after hours, and making first-time buyers feel confident. Customers specifically ask for him by name.</td></tr><tr><td><strong>Larry Minnick</strong></td><td>30</td><td>100% Positive</td><td>Sales</td><td>Elite Ambassador</td><td>Long-tenured sales leader praised since 2017. Known for exceptional phone communication, no-pressure approach, willingness to help load vehicles, and going above expectations (refunded non-refundable deposit for customer facing hardship).</td></tr><tr><td><strong>Lance Taylor</strong></td><td>18</td><td>100% Positive</td><td>Sales · F&I</td><td>Elite Ambassador</td><td>Versatile team member effective in both sales and finance roles. Praised for thoroughness, helpfulness with gear selection, and post-sale support including personally installing tags and explaining features.</td></tr><tr><td><strong>Steven Carpenter</strong></td><td>17</td><td>100% Positive</td><td>General Manager · Sales</td><td>Elite Ambassador</td><td>GM who leads by example — personally drove to a customer's home to resolve a hitch issue. Praised for hands-on involvement, reading manuals, patience with indecisive buyers, and creating a welcoming culture.</td></tr><tr><td><strong>Dave / David Willoughby</strong></td><td>14</td><td>100% Positive</td><td>Sales</td><td>Elite Ambassador</td><td>Praised for research assistance, patience, product knowledge, and prompt communication. Multiple out-of-town customers specifically credit him for seamless long-distance purchases.</td></tr><tr><td><strong>Simon Green</strong></td><td>13</td><td>100% Positive</td><td>Sales</td><td>Elite Ambassador</td><td>Rising star with heavy recent mentions (2025-2026). Known for personal delivery of vehicles, excellent Facebook/text responsiveness, patience during test drives, and making the process painless.</td></tr><tr><td><strong>Lance (Finance)</strong></td><td>8</td><td>100% Positive</td><td>F&I</td><td>High Performer</td><td>Finance manager praised for making paperwork quick, comfortable, and transparent. Customers appreciate his personable nature and willingness to work within budgets.</td></tr><tr><td><strong>Danny</strong></td><td>7</td><td>100% Positive</td><td>Service</td><td>High Performer</td><td>Service technician/advisor consistently praised for professionalism, bike knowledge, and treating customers right. Go-to person for the service department.</td></tr><tr><td><strong>Pete</strong></td><td>7</td><td>100% Positive</td><td>Owner</td><td>High Performer</td><td>Owner praised for personal involvement — airport pickups, opening store on holidays, following up after issues. His passion for motorcycles and personal collection create memorable experiences.</td></tr><tr><td><strong>Kevin Haggerty</strong></td><td>6</td><td>100% Positive</td><td>Sales</td><td>High Performer</td><td>Praised for product knowledge, patience with decision-making process, upfront cost transparency, and attentive follow-through. Earned trust from a couple who had a bad experience elsewhere.</td></tr><tr><td><strong>Jacob</strong></td><td>5</td><td>100% Positive</td><td>Service · Parts</td><td>High Performer</td><td>Praised for patient phone support, texting photos for troubleshooting, sourcing parts for e-bikes, and meticulous service care on motorcycles.</td></tr><tr><td><strong>Vic</strong></td><td>4</td><td>100% Positive</td><td>Parts</td><td>Reliable Contributor</td><td>Parts department standout praised for helmet expertise, welcoming female shoppers, and helping source hard-to-find items.</td></tr><tr><td><strong>Tony Martin</strong></td><td>3</td><td>100% Positive</td><td>Sales</td><td>Reliable Contributor</td><td>Praised for making vehicle purchases the easiest ever and professional, non-pushy approach.</td></tr><tr><td><strong>Robb</strong></td><td>2</td><td>100% Positive</td><td>Sales</td><td>Reliable Contributor</td><td>Handled remote/cross-country purchases via email and phone with excellent communication and patience.</td></tr><tr><td><strong>Warren</strong></td><td>2</td><td>100% Positive</td><td>Sales</td><td>Reliable Contributor</td><td>Praised for patience with brand indecision and timely question responses.</td></tr><tr><td><strong>Matt</strong></td><td>1</td><td>Negative</td><td>Sales</td><td>Needs Coaching</td><td>One caller reported Matt couldn't answer whether a Suzuki DRZ50 was 2-stroke or 4-stroke, leading the customer to take their business elsewhere.</td></tr></tbody>
+          <tbody><tr><td><strong>Drew Mason</strong></td><td>32</td><td>Overwhelmingly Positive</td><td>Sales</td><td>Elite Ambassador</td><td>Top performer and dealership cornerstone. Praised for knowledge, responsiveness, after-hours dedication, and making first-time buyers feel at ease. Drives repeat business and long-distance customers.</td></tr><tr><td><strong>Larry Minnick</strong></td><td>22</td><td>Overwhelmingly Positive</td><td>Sales</td><td>Elite Ambassador</td><td>Trusted advisor who excels at phone-based and long-distance sales. Customers love his no-pressure style, fast communication, and willingness to handle everything seamlessly.</td></tr><tr><td><strong>Simon Green</strong></td><td>15</td><td>Overwhelmingly Positive</td><td>Sales</td><td>Elite Ambassador</td><td>Praised for patience, courtesy, and personal touches including home delivery. Handles UTV, ATV, and motorcycle sales with equal expertise.</td></tr><tr><td><strong>Lance Taylor</strong></td><td>11</td><td>Overwhelmingly Positive</td><td>Sales</td><td>Elite Ambassador</td><td>Strong closer who excels at text/email/phone sales processes. Praised for post-sale support even at 200+ mile distances. Thorough and knowledgeable.</td></tr><tr><td><strong>Steven Carpenter</strong></td><td>9</td><td>Very Positive</td><td>Sales / GM</td><td>High Performer</td><td>Recognized as GM who leads by example. Personally drove to a customer's home to resolve a hitch issue. Praised for proactive communication during recall waits.</td></tr><tr><td><strong>Kevin Haggerty</strong></td><td>4</td><td>Positive</td><td>Sales</td><td>Reliable Contributor</td><td>Knowledgeable salesperson praised for zero-pressure approach and suggesting helpful accessories. Customers appreciate his caring, upfront style.</td></tr><tr><td><strong>Danny</strong></td><td>4</td><td>Positive</td><td>Service</td><td>Reliable Contributor</td><td>Service technician/advisor praised for meticulous care and professionalism. Repeat customers specifically seek him out.</td></tr><tr><td><strong>Jacob</strong></td><td>3</td><td>Positive</td><td>Service / Parts</td><td>Reliable Contributor</td><td>Praised for patience with e-bike customers, willingness to research solutions, and excellent phone/text communication.</td></tr><tr><td><strong>Robb</strong></td><td>2</td><td>Positive</td><td>Sales</td><td>Reliable Contributor</td><td>Handled long-distance and out-of-state sales with excellent communication and organization.</td></tr><tr><td><strong>Warren</strong></td><td>2</td><td>Positive</td><td>Sales</td><td>Reliable Contributor</td><td>Patient with indecisive buyers; praised for timely answers and fair dealings.</td></tr><tr><td><strong>Vic</strong></td><td>2</td><td>Positive</td><td>Parts</td><td>Reliable Contributor</td><td>Made a female customer feel especially welcomed and comfortable; willing to source hard-to-find items.</td></tr><tr><td><strong>Matt</strong></td><td>1</td><td>Negative</td><td>Sales</td><td>Needs Coaching</td><td>Single mention cites inability to answer basic motorcycle specs (2-stroke vs 4-stroke). Needs product knowledge training.</td></tr></tbody>
         </table>
       </div>
       
@@ -707,7 +687,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
       <div class="report-section-title">OEM / Brand Analysis</div>
       <table class="report-table">
         <thead><tr><th>Brand</th><th>Mentions</th><th>Avg Stars</th><th>Read</th></tr></thead>
-        <tbody><tr><td>Kawasaki</td><td>58</td><td>4.88</td><td>Dominant brand with reviews spanning Ninja, Z900, ZX-6R, Vulcan, KLX, KX, Brute Force, Mule, KRX, and Ridge lines. Customers travel hours for Kawasaki pricing. Strong service and parts support.</td></tr><tr><td>CFMOTO</td><td>24</td><td>4.96</td><td>Fast-growing segment with near-perfect reviews. UForce UTVs, IBEX 450, CForce ATVs, 450NK, 450SS, 675SS, and 800NK motorcycles all represented. Price-to-value proposition resonates strongly.</td></tr><tr><td>Suzuki</td><td>18</td><td>4.94</td><td>Loyal following for GSX-R sport bikes, GSX-S street bikes, V-Strom adventure, DR650, M109 cruiser, and Hayabusa. Staff expertise as riders adds credibility.</td></tr><tr><td>Mahindra</td><td>8</td><td>4.63</td><td>Tractor segment growing with positive sales experiences but two pricing/advertising complaints and one service learning-curve note on larger models.</td></tr><tr><td>Honda</td><td>2</td><td>5.00</td><td>Limited presence — Honda Pioneer UTV mentioned positively. One customer traded Honda ATV for Kawasakis.</td></tr><tr><td>Denago</td><td>1</td><td>5.00</td><td>E-bike brand with single positive mention for Christmas gift purchase.</td></tr><tr><td>Cannondale</td><td>1</td><td>5.00</td><td>E-bike flat tire service handled expertly by Jacob in service.</td></tr></tbody>
+        <tbody><tr><td>CFMOTO</td><td>22</td><td>4.91</td><td>Highest-volume brand across ATVs, UTVs, and motorcycles. Strong customer satisfaction with 450NK, 450SS, 675SS, CFORCE, and UFORCE lines. Competitive pricing is a major draw.</td></tr><tr><td>Kawasaki</td><td>18</td><td>4.83</td><td>Core franchise brand with deep inventory. KRX 4, Mule PRO-FXT, Z900, Ninja series, and Brute Force all represented. Slight drag from one service-related negative on a ZX6 recall.</td></tr><tr><td>Suzuki</td><td>10</td><td>4.90</td><td>Strong motorcycle brand with Hayabusa, GSX-R 1000R, GSX-8R, GSXS, M109, and DRZ lines. Customers travel long distances for Suzuki inventory and pricing.</td></tr><tr><td>Mahindra</td><td>4</td><td>5.00</td><td>Growing tractor segment with perfect ratings. Drew and Larry both handle tractor sales well; customers cite best eastern seaboard pricing.</td></tr><tr><td>Honda</td><td>2</td><td>5.00</td><td>Limited representation; Pioneer 1000 Deluxe mentioned positively.</td></tr><tr><td>Denago</td><td>1</td><td>5.00</td><td>Single e-bike sale (Trailhawk 10i) with positive feedback.</td></tr><tr><td>Cannondale</td><td>1</td><td>5.00</td><td>E-bike service interaction; parts department sourced replacement tire efficiently.</td></tr></tbody>
       </table>
     </div>
       
@@ -715,45 +695,51 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);font
       <div class="report-section-title">Quarterly Trend Analysis</div>
       <table class="report-table">
         <thead><tr><th>Quarter</th><th>Reviews</th><th>Avg Stars</th><th>5-Star %</th><th>Negatives</th></tr></thead>
-        <tbody><tr><td>24 Q1</td><td>8</td><td>4.92</td><td>88%</td><td>0</td></tr><tr><td>24 Q2</td><td>10</td><td>5.00</td><td>100%</td><td>0</td></tr><tr><td>24 Q3</td><td>12</td><td>5.00</td><td>100%</td><td>0</td></tr><tr><td>24 Q4</td><td>5</td><td>5.00</td><td>100%</td><td>0</td></tr><tr><td>25 Q1</td><td>17</td><td>4.83</td><td>82%</td><td>2</td></tr><tr><td>25 Q2</td><td>7</td><td>4.71</td><td>86%</td><td>1</td></tr><tr><td>25 Q3</td><td>5</td><td>5.00</td><td>100%</td><td>0</td></tr><tr><td>25 Q4</td><td>19</td><td>4.94</td><td>95%</td><td>0</td></tr><tr><td>26 Q1</td><td>28</td><td>5.00</td><td>100%</td><td>0</td></tr><tr><td>26 Q2</td><td>7</td><td>5.00</td><td>100%</td><td>0</td></tr></tbody>
+        <tbody><tr><td>24 Q2</td><td>13</td><td>4.77</td><td>92%</td><td>1</td></tr><tr><td>24 Q3</td><td>17</td><td>4.76</td><td>94%</td><td>1</td></tr><tr><td>24 Q4</td><td>16</td><td>4.75</td><td>94%</td><td>1</td></tr><tr><td>25 Q1</td><td>15</td><td>4.80</td><td>93%</td><td>1</td></tr><tr><td>25 Q2</td><td>15</td><td>4.13</td><td>73%</td><td>3</td></tr><tr><td>25 Q3</td><td>12</td><td>4.67</td><td>92%</td><td>1</td></tr><tr><td>25 Q4</td><td>27</td><td>4.93</td><td>96%</td><td>0</td></tr><tr><td>26 Q1</td><td>34</td><td>5.00</td><td>100%</td><td>0</td></tr><tr><td>26 Q2</td><td>9</td><td>5.00</td><td>100%</td><td>0</td></tr></tbody>
       </table>
     </div>
       <div class="report-section">
         <div class="report-section-title">Recommended Action Plan</div>
-        <div class='report-subsection-title'>General Manager</div><ul class='report-list'><li>Mandate itemized out-the-door pricing on all quotes — phone, email, web, and in-person — with freight/assembly clearly disclosed</li><li>Conduct monthly service department QC audits with torque verification and safety checklist compliance</li><li>Codify Drew Mason's and Larry Minnick's sales processes as formal training playbooks for new hires</li><li>Review and respond to all unanswered negative reviews within 48 hours</li></ul><div class='report-subsection-title'>Sales Manager</div><ul class='report-list'><li>Implement 60-second greeting standard with rotating greeter assignment during peak hours</li><li>Create same-day credit application acknowledgment policy with mandatory 24-hour follow-up</li><li>Ensure all phone staff can answer basic model specifications for every carried brand</li><li>Monitor and coach Matt on product knowledge deficiencies</li></ul><div class='report-subsection-title'>Service Manager</div><ul class='report-list'><li>Implement pre-delivery inspection checklist: torque specs verified, hose routing confirmed, tire pressures set to spec, all bolts confirmed tight</li><li>Address capacity planning to avoid turning away service customers</li><li>Establish clear policy for servicing non-purchased vehicles to avoid lost sales opportunities</li><li>Create feedback loop with customers 48 hours after service pickup</li></ul><div class='report-subsection-title'>Marketing</div><ul class='report-list'><li>Feature 'worth the drive' customer testimonials in advertising — highlight the 3-9 hour drive stories</li><li>Promote Drew, Larry, Simon, and Lance by name in social media content to build personal brand equity</li><li>Create video content showcasing the riding expertise and passion of the sales team</li><li>Develop a referral program to capitalize on the extremely high organic recommendation rate</li></ul><div class='report-subsection-title'>Finance Manager</div><ul class='report-list'><li>Discuss extended warranty options during initial quote phase rather than at pickup to allow customers to include in financing</li><li>Ensure no hard credit pulls are conducted without explicit written customer authorization</li><li>Continue proactive rate shopping — multiple reviewers praise being given best rates without asking</li></ul>
+        <div class='report-subsection-title'>Owner / General Manager</div><ul class='report-list'><li>Mandate transparent all-in pricing on website and in all initial quotes — list freight, assembly, and dealer prep fees clearly on every product page</li><li>Increase review response rate from 41.8% to 80%+ with personalized, timely replies — especially to negative reviews</li><li>Investigate the unauthorized credit pull allegation and ensure FCRA-compliant authorization processes are documented and followed</li><li>Recognize and retain Elite Ambassadors (Drew, Larry, Simon, Lance) — they are the dealership's competitive advantage</li></ul><div class='report-subsection-title'>Service Manager</div><ul class='report-list'><li>Implement mandatory torque-spec verification checklist with dual sign-off before any vehicle is released</li><li>Conduct root-cause analysis on the safety incident (overtorqued axle, loose bolts, disconnected hoses) and retrain affected technicians</li><li>Create a post-service quality inspection form visible to customers to rebuild confidence</li><li>Continue investing in Danny, Jacob, and Jordan who earn strong individual praise</li></ul><div class='report-subsection-title'>Sales Manager</div><ul class='report-list'><li>Coach Matt on product knowledge — basic specs (2-stroke vs 4-stroke, model details) must be answerable by all staff</li><li>Implement a 60-second greeting standard with rotation coverage to prevent walk-in customers from being ignored</li><li>Standardize the quote-to-close process so pricing doesn't change between initial quote and final bill of sale</li><li>Leverage the 25 Q2 dip (4.13 avg, 3 negatives) as a case study for what happens when fee transparency slips</li></ul><div class='report-subsection-title'>F&I Manager</div><ul class='report-list'><li>Ensure written authorization is obtained and documented before any credit inquiry is submitted</li><li>Continue the excellent work on low-APR financing and quick paperwork processing that customers praise</li><li>Discuss extended warranty options earlier in the process so customers aren't surprised at signing</li></ul>
       </div>
       <div class="report-section report-bottom-box" style="border-bottom:none">
         <div class="report-section-title">Bottom Line</div>
-        <p>Ultimate Cycle is an elite powersports dealership with a reputation that most dealers would envy — a 4.82-star average, 92% positive sentiment, customers willing to drive 3-9 hours for the experience, and a roster of genuinely beloved sales professionals. The business has maintained exceptional consistency from 2015 through 2026, with recent performance trending even higher. The two areas requiring immediate executive attention are fee transparency (clearly disclosing freight/assembly costs upfront) and service department quality control (implementing safety-critical inspection checklists). Addressing these manageable risks will protect the dealership's outstanding brand and support continued growth across their expanding CFMOTO, Kawasaki, Suzuki, and Mahindra product lines.</p>
+        <p>Ultimate Cycle is an elite powersports dealership with a 4.79-star average, exceptional sales talent, and a pricing strategy that draws customers from across the eastern seaboard. The 25 Q2 dip to 4.13 stars — driven by fee transparency complaints — has been fully recovered with perfect 5.0 scores in recent quarters. Two urgent priorities remain: (1) implementing rigorous service department QC to prevent any recurrence of the dangerous mechanical errors reported, and (2) permanently resolving fee transparency by displaying all costs upfront on the website and in initial quotes. With these fixes, Ultimate Cycle is well-positioned to sustain its dominant reputation and growing customer base.</p>
       </div>
     </div>
   </div>
 
 </div>
 
-<div class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo">
-      <img class="footer-logo-img" src="https://cdn.prod.website-files.com/68238b5d1d8b582ad3c13bea/684c2fce2658b5354c86fdbb_f4f0c66a294a55c2274a9a418ae8dbcf_Teal.svg" alt="HeroHub"
-           onerror="this.outerHTML='<svg viewBox=\'0 0 160 28\' style=\'height:18px;width:auto\' xmlns=\'http://www.w3.org/2000/svg\'><text x=\'0\' y=\'22\' font-family=\'Inter,sans-serif\' font-weight=\'800\' font-size=\'20\' letter-spacing=\'-0.5\' fill=\'#00b8a0\'>HEROHUB</text></svg>'">
-    </div>
-    <div class="footer-left">Ultimate Cycle · Powhatan, Virginia &nbsp;·&nbsp; Reputation Audit · Mar 2015 – Apr 2026 &nbsp;·&nbsp; CONFIDENTIAL</div>
-    <div class="footer-right">296 reviews &nbsp;·&nbsp; 4.82★ &nbsp;·&nbsp; 87.8% five-star</div>
-  </div>
-</div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-function downloadFullReport() {
+
+// ── Direct HTML file download ─────────────────────────────────────────────
+function downloadFile() {
+  // Expand full report before capturing so it's included in the download
   const panel = document.getElementById('fullReport');
-  const btn = document.querySelector('.report-toggle');
-  const wasHidden = panel.hidden;
-  panel.hidden = false; btn.setAttribute('aria-expanded','true');
-  const s = document.createElement('style'); s.id='fpo';
-  s.textContent='@media print{.report-section-wrapper{display:block!important}.page-hero,.body>*:not(.report-section-wrapper){display:none!important}.topbar{display:none!important}#fullReport{display:block!important}.report-toggle{display:none!important}}';
-  document.head.appendChild(s); window.print();
-  setTimeout(()=>{document.getElementById('fpo').remove();if(wasHidden){panel.hidden=true;btn.setAttribute('aria-expanded','false');}},500);
+  const btn   = document.querySelector('.report-toggle');
+  const wasHidden = panel ? panel.hidden : false;
+  if(panel && wasHidden){ panel.hidden=false; if(btn) btn.setAttribute('aria-expanded','true'); }
+
+  const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href     = url;
+  a.download = 'ultimate-cycle-reputation-report.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  // Restore panel state
+  if(panel && wasHidden){ panel.hidden=true; if(btn) btn.setAttribute('aria-expanded','false'); }
 }
+
+// ── Full report toggle ────────────────────────────────────────────────────
 function toggleReport() {
   const btn=document.querySelector('.report-toggle');
   const panel=document.getElementById('fullReport');
@@ -767,36 +753,55 @@ document.addEventListener('DOMContentLoaded',function(){
   const trendChart = new Chart(document.getElementById('trendChart'),{
     type:'line',
     data:{
-      labels:["24 Q1", "24 Q2", "24 Q3", "24 Q4", "25 Q1", "25 Q2", "25 Q3", "25 Q4", "26 Q1", "26 Q2"],
+      labels:["24 Q2", "24 Q3", "24 Q4", "25 Q1", "25 Q2", "25 Q3", "25 Q4", "26 Q1", "26 Q2"],
       datasets:[{
-        data:[4.92, 5.0, 5.0, 5.0, 4.83, 4.71, 5.0, 4.94, 5.0, 5.0],
+        data:[4.77, 4.76, 4.75, 4.8, 4.13, 4.67, 4.93, 5.0, 5.0],
         borderColor:'#00b8a0',
         backgroundColor:ctx=>{const g=ctx.chart.ctx.createLinearGradient(0,0,0,200);g.addColorStop(0,'rgba(0,184,160,0.15)');g.addColorStop(1,'rgba(0,184,160,0)');return g;},
         borderWidth:2.5,pointRadius:mobile?4:5,pointBackgroundColor:'#ffffff',
         pointBorderColor:'#00b8a0',pointBorderWidth:2.5,pointHoverRadius:7,
-        fill:true,tension:0.4
+        fill:true,tension:0.4,clip:false
       }]
     },
     options:{
       responsive:true,maintainAspectRatio:true,aspectRatio:2,
+      layout:{padding:{left:8,right:4,top:10}},
       plugins:{legend:{display:false},tooltip:{backgroundColor:'#0d1b2e',titleColor:'#8a96a6',bodyColor:'#fff',padding:10,cornerRadius:8,callbacks:{label:c=>' '+c.raw.toFixed(2)+' ★'}}},
       scales:{
-        y:{min:3.5,max:5.1,ticks:{color:tc,font:{size:mobile?9:10,family:'JetBrains Mono'},stepSize:0.5,callback:v=>v.toFixed(1)},grid:{color:gc},border:{display:false}},
-        x:{ticks:{color:tc,font:{size:mobile?8:10},maxRotation:mobile?30:0,autoSkip:mobile},grid:{display:false},border:{display:false}}
+        y:{
+          min:3.8,max:5.0,
+          afterFit:(axis)=>{axis.width=Math.max(axis.width,44);},
+          ticks:{
+            color:tc,
+            font:{size:mobile?9:10,family:'JetBrains Mono'},
+            stepSize:0.2,
+            callback:function(v){return v.toFixed(1);}
+          },
+          grid:{color:gc,drawTicks:false},
+          border:{display:false}
+        },
+        x:{ticks:{color:tc,font:{size:mobile?8:10},maxRotation:mobile?30:0,autoSkip:true,maxTicksLimit:mobile?6:12},grid:{display:false},border:{display:false}}
       }
     }
   });
   const volChart = new Chart(document.getElementById('volChart'),{
     type:'bar',
     data:{
-      labels:["24 Q1", "24 Q2", "24 Q3", "24 Q4", "25 Q1", "25 Q2", "25 Q3", "25 Q4", "26 Q1", "26 Q2"],
-      datasets:[{data:[8, 10, 12, 5, 17, 7, 5, 19, 28, 7],backgroundColor:["#b3ece5","#b3ece5","#b3ece5","#b3ece5","#5ccfc4","#5ccfc4","#00a896","#008f7c"],borderRadius:6,borderSkipped:false}]
+      labels:["24 Q2", "24 Q3", "24 Q4", "25 Q1", "25 Q2", "25 Q3", "25 Q4", "26 Q1", "26 Q2"],
+      datasets:[{data:[13, 17, 16, 15, 15, 12, 27, 34, 9],backgroundColor:["#b3ece5","#b3ece5","#b3ece5","#b3ece5","#5ccfc4","#5ccfc4","#00a896","#008f7c"],borderRadius:6,borderSkipped:false}]
     },
     options:{
       responsive:true,maintainAspectRatio:true,aspectRatio:2,
+      layout:{padding:{left:8,right:4}},
       plugins:{legend:{display:false},tooltip:{backgroundColor:'#0d1b2e',titleColor:'#8a96a6',bodyColor:'#fff',padding:10,cornerRadius:8,callbacks:{label:c=>' '+c.raw+' reviews'}}},
       scales:{
-        y:{ticks:{color:tc,font:{size:mobile?9:10,family:'JetBrains Mono'}},grid:{color:gc},border:{display:false}},
+        y:{
+          beginAtZero:true,
+          afterFit:(axis)=>{axis.width=Math.max(axis.width,44);},
+          ticks:{color:tc,font:{size:mobile?9:10,family:'JetBrains Mono'},maxTicksLimit:5,precision:0},
+          grid:{color:gc,drawTicks:false},
+          border:{display:false}
+        },
         x:{ticks:{color:tc,font:{size:mobile?8:10},maxRotation:0},grid:{display:false},border:{display:false}}
       }
     }
